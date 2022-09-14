@@ -53,3 +53,30 @@ for(let key in captainAmerica) {
 //deleting a key from an obj
 delete captainAmerica.age;
 console.log(captainAmerica);
+
+
+var obj={
+    name:"John",
+    age:32
+}
+let clone={};
+//jinke andar copy hona hai  //jo copy hona hai
+Object.assign(clone, obj, {isFemale: true},{favFood:"Pizza"});
+console.log(clone);
+obj.name="Deepti";
+console.log(obj);
+console.log(clone);
+
+
+//nested object cloning
+let user= {
+    name:"Pete",
+    sizes:{
+        height:182,
+        width:50,
+    },
+};
+Object.assign(clone,user);
+user.sizes.height=100;
+console.log(clone);
+console.log(user);
